@@ -1,0 +1,17 @@
+import random
+import json
+import datetime
+
+
+def main():
+    score = random.randint(1,999)
+    #print(score)
+    dateDaConsulta = str(datetime.datetime.now())
+
+    print(json.dumps({'Score': score, 'Data': dateDaConsulta}))
+
+#start process
+if __name__ == '__main__':
+    main()
+
+
