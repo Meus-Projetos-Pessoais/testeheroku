@@ -9,7 +9,7 @@ def main():
     #print(score)
     dateDaConsulta = str(datetime.datetime.now())
     
-    print(json.dumps({'Score': score, 'Data': dateDaConsulta}))
+    return print(json.dumps({'Score': score, 'Data': dateDaConsulta}))
 
 #start process
 if __name__ == '__main__':

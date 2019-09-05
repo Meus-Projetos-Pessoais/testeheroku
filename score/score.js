@@ -1,6 +1,6 @@
 var spawn = require('child_process').spawn,
     py    = spawn('python', ['score.py']),
-    data = [1,2,3,4,5,6,7,8,9],
+    data = [],
     dataString = '';
 
 py.stdout.on('data', function(data){

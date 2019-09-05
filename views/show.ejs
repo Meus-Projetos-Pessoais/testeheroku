@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD</title>
+</head>
+<body>
+
+<h2>Registros<h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Nome</td>
+                <td>CPF</td>
+                <td>CEP</td>
+                <td>Rua</td>
+                <td>Numero</td>
+                <td>Bairro</td>
+                <td>Ação</td> 
+            </tr>
+        </thead>
+        <tbody>
+        <% data.forEach(function(details) { %>
+            <tr>
+                <td><%= details._id %></td>
+                <td><%= details.nome %></td>
+                <td><%= details.cpf %></td>
+                <td><%= details.cep %></td>
+                <td><%= details.rua %></td>
+                <td><%= details.numero %></td>
+                <td><%= details.bairro%></td>
+                <td><a href="/editar/<%= details._id %>">Editar</a>
+                -
+                <a href="/delete/<%= details._id %>">Deletar</a>
+                </td>
+                
+            </tr>
+            <% }) %>
+        </tbody>
+        <button><a href="/cadastro">Novo Cliente</a></button>
+</body>
+</html>
